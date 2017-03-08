@@ -1,0 +1,19 @@
+
+<h2>Rate our video! </h2>
+<p>We always love to hear from our users. Let us know how useful you found this video</p>
+<div class="row">
+    <div class="col-sm-12 padded">
+        <div class="col-sm-7 embed-responsive embed-responsive-16by9">
+            <video src="{{video.url}}" width="100%" height="100%" class="embed-responsive-item" controls></video> 
+        </div>
+        <div class="col-sm-4">
+            <h2>{{video.name}}</h2>
+            <span>{{video.description}}</span>
+            <br /><br />
+            <p>Rate video</p>
+            <angularRating #ratingReference (onChange)="onChange($event)"></angularRating>
+            <br />
+            <a (click)="rateVideo(video._id)" class="btn btn-block btn-outline btn-primary" >Submit Rating</a>
+        </div>
+  </div>
+</div>

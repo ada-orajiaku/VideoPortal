@@ -1,0 +1,22 @@
+<div class="row">
+	<div class="col-sm-2">
+	</div>
+	<div class="col-sm-6">
+		<br>
+		<form (submit)="login($event, username.value, password.value)" class="form-signin">       
+		    <h3 class="form-signin-heading">Welcome Back! Please Sign In</h3>
+			  <hr class="colorgraph"><br>
+			   <div *ngIf="invalidLogin">
+					<p class="label label-danger"> Invalid login credentials</p><br /><br />
+				</div>
+				
+			  <input type="text" class="form-control" #username  id="username" placeholder="Username" required autofocus="" />
+				<br>
+			  <input type="password" class="form-control" #password id="password" placeholder="Password" required />     		  
+			 		<br>
+			  <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Login</button>  			
+		</form>	
+	</div>
+		<div class="col-sm-3">
+	</div>
+</div>
